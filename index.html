@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="script.js"></script>
+<style>
+ul li{
+list-style: none;
+display: inline-block;
+}
+
+</style>
+
+
+
+</title>
+
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1>Programming 3 Game</h1>
+
+    </div>
+    <div class="tools">
+        <h1 style="color:rgb(189, 240, 255)">Events</h1>
+        <ul>
+            <li>
+                <button onclick="kill()">Kill them all</button>
+            </li>
+            <li>
+                <button onclick="addGrass()">Add grass</button>
+            </li>
+            <li>
+                <button onclick="addGrassEater()">Add grass eater</button>
+            </li>
+            <li>
+                <button onclick="addGishatich()">Add gishatich</button>
+            </li>
+            <li>
+                <button onclick="addCursedArea()">Add Cursed area</button>
+            </li>
+            <li>
+                <button onclick="addCrich()">Add crich</button>
+            </li>
+        </ul>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Color</th>
+                <th scope="col">Description</th>
+                <th scope="col">Was born</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:green;"></td>
+                <td>Green is a grass that multiplies in one N cycle, dies when eaten by weeds, or burned by fire, or trampled by a predator.</td>
+                <td id="grassCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:rgb(241, 241, 0);"></td>
+                <td>Yellow is an herbivore that reproduces after eating N grass և dies after not eating N grass, or
+                    when he is eaten by a predator, or when he is burned by fire.</td>
+                <td id="grasseaterCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:cyan;"></td>
+                <td>Blue is the coffin on which the image dies.</td>
+                <td id="gishatichCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:orange;"></td>
+                <td>The orange is a dispersing device, when its energy reaches a certain number, it multiplies grass, herbivores, predators.</td>
+                <td id="cursedareaCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td>Red is a predator that reproduces after eating N herbivores և dies after not eating N, or
+                    when he stands on the coffin he dies.</td>
+                <td id="crichCount"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
